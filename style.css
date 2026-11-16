@@ -1,0 +1,415 @@
+/* =================================
+   GENERAL SETTINGS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f7fc;
+    color: #263449;
+    line-height: 1.7;
+}
+
+h1, h2, h3 {
+    line-height: 1.3;
+}
+
+/* =================================
+   NAVIGATION BAR
+================================= */
+
+.navbar {
+    width: 100%;
+    padding: 18px 8%;
+    background: #102542;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #60a5fa;
+}
+
+/* =================================
+   THREE PAGE SYSTEM
+================================= */
+
+.page {
+    display: none;
+    min-height: 100vh;
+    padding: 50px 8%;
+    animation: fadeIn 0.5s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =================================
+   HOME / HERO SECTION
+================================= */
+
+.hero {
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+    background: linear-gradient(135deg, #102542, #2563eb);
+    border-radius: 20px;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.welcome {
+    color: #bfdbfe;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #93c5fd;
+}
+
+.hero h3 {
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.hero-content > p:not(.welcome) {
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 30px;
+    background: white;
+    color: #102542;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #bfdbfe;
+    transform: translateY(-4px);
+}
+
+/* =================================
+   SECTION HEADINGS
+================================= */
+
+section.section,
+#education,
+#family {
+    padding: 50px 20px;
+}
+
+section h2 {
+    text-align: center;
+    color: #102542;
+    font-size: 34px;
+    margin-bottom: 35px;
+}
+
+/* =================================
+   COMMON CARDS
+================================= */
+
+.card,
+.info-card,
+.hobby-card {
+    max-width: 850px;
+    margin: 25px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(16, 37, 66, 0.08);
+    transition: 0.3s ease;
+}
+
+.card:hover,
+.info-card:hover,
+.hobby-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(16, 37, 66, 0.13);
+}
+
+.card h3,
+.info-card h3,
+.hobby-card h3 {
+    color: #2563eb;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.card p,
+.info-card p,
+.hobby-card p {
+    font-size: 16px;
+    margin-bottom: 12px;
+    line-height: 1.8;
+}
+
+/* =================================
+   FAMILY SECTION
+================================= */
+
+#family {
+    text-align: center;
+}
+
+#family .card {
+    text-align: left;
+}
+
+#family .card h3 {
+    margin-top: 15px;
+}
+
+/* =================================
+   EDUCATION SECTION
+================================= */
+
+#education {
+    text-align: center;
+}
+
+#education .card {
+    text-align: left;
+    border-left: 5px solid #2563eb;
+}
+
+#education .card h3 {
+    color: #102542;
+}
+
+/* =================================
+   HOBBIES SECTION
+================================= */
+
+#hobbies {
+    text-align: center;
+}
+
+.hobby-card {
+    max-width: 650px;
+}
+
+.football-icon {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+.hobby-card h3 {
+    font-size: 27px;
+}
+
+/* =================================
+   GOALS SECTION
+================================= */
+
+.goals {
+    text-align: center;
+}
+
+.goals .info-card {
+    text-align: left;
+    border-top: 5px solid #2563eb;
+}
+
+/* =================================
+   NEXT AND PREVIOUS BUTTONS
+================================= */
+
+.next-btn,
+.prev-btn {
+    display: inline-block;
+    padding: 13px 32px;
+    margin: 25px 10px;
+    border: none;
+    border-radius: 30px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.next-btn:hover,
+.prev-btn:hover {
+    background: #102542;
+    transform: translateY(-3px);
+}
+
+.page-buttons {
+    text-align: center;
+    margin-top: 35px;
+}
+
+/* =================================
+   PAGE INDICATOR
+================================= */
+
+.page-indicator {
+    text-align: center;
+    color: #102542;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 20px;
+}
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+    background: #102542;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+    margin-top: 40px;
+}
+
+footer h3 {
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+.copyright {
+    color: #bfdbfe;
+    font-size: 13px;
+    margin-top: 15px;
+}
+
+/* =================================
+   MOBILE RESPONSIVENESS
+================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        justify-content: center;
+        text-align: center;
+        padding: 18px 15px;
+    }
+
+    .navbar ul {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .navbar ul li a {
+        font-size: 13px;
+    }
+
+    .page {
+        padding: 25px 15px;
+    }
+
+    .hero {
+        min-height: 70vh;
+        padding: 35px 15px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero h3 {
+        font-size: 19px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    .card,
+    .info-card,
+    .hobby-card {
+        padding: 25px 20px;
+    }
+
+    .next-btn,
+    .prev-btn {
+        padding: 12px 23px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .navbar ul {
+        gap: 10px;
+    }
+
+    .navbar ul li a {
+        font-size: 12px;
+    }
+}
