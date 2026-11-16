@@ -328,3 +328,38 @@ footer h3 {
     line-height: 1.8;
     margin-bottom: 15px;
 }
+/* Family Section Card Design */
+#family {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f4f7fc;
+}
+
+#family h2 {
+    font-size: 40px;
+    color: #142b4a;
+    margin-bottom: 40px;
+}
+
+#family .card {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+#family .card h3 {
+    color: #2563eb;
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+#family .card p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
